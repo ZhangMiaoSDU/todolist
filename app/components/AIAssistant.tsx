@@ -105,7 +105,6 @@ export default function AIAssistant({ todos, selectedDate }: AIAssistantProps) {
   useEffect(() => {
     const generateWeeklySummary = async () => {
       setIsLoading(true);
-      const today = selectedDate.toISOString().split('T')[0];
       const last7Days = new Date(selectedDate);
       last7Days.setDate(last7Days.getDate() - 7);
       
